@@ -1,0 +1,755 @@
+/*La tipografía usada dentro de nuestra web de google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,703;1,703&display=swap');
+
+/*El asterisco lo usamos para dar estas características a TODOS los elementos de la web sin excecpción*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*Características comunes a todos los bodys de cada web, foto de fondo, que no se repite, centrada, y fija, ademas de añadir ya la tipografia*/
+body {
+    background-image: url("../img/fondo2.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    font-family: "Montserrat", sans-serif;
+}
+
+/*Características a todoso los section*/
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+    margin-bottom: 100px;
+    padding-bottom: 20px;
+}
+
+
+
+/*MENU */
+header {
+    position: absolute; /* Establece la posición del encabezado */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ancho completo del encabezado */
+    padding: 40px 100px; /* Espaciado interno del encabezado */
+    display: flex; /* Usa el modelo de caja flexible */
+    justify-content: space-between; /* Distribuye los elementos horizontalmente */
+    align-items: center; /* Centra verticalmente los elementos */
+    background-color: rgba(128, 128, 128, 0.079); /* Color de fondo con transparencia */
+    font-family: "Pixelify Sans", sans-serif; /* Fuente del texto */
+}
+
+/* Estiliza el logo dentro del encabezado */
+header .logo {
+    width: 60%; /* Ancho del logo */
+    padding: 0 10px; /* Espaciado interno del logo */
+}
+
+/* Cambia el color del logo al pasar el cursor */
+header .logo:hover {
+    color: #ff0000;
+    transition: 1s; /* Animación de transición */
+}
+
+/* Estiliza el menú de navegación */
+header .navbar {
+    display: flex; /* Utiliza el modelo de caja flexible */
+    list-style: none; /* Elimina los marcadores de lista */
+    margin: 0;
+    padding: 0;
+}
+
+/* Estiliza los elementos de la lista del menú */
+header .navbar li {
+    position: relative;
+    display: inline-block; /* Muestra los elementos en línea */
+    padding: 10px;
+    list-style: none;
+    margin-left: 30px; /* Espaciado entre los elementos */
+}
+
+/* Estiliza los enlaces del menú */
+header .navbar li a {
+    text-decoration: none; /* Elimina el subrayado */
+    color: #ffffff; 
+    font-weight: 600;
+    padding: 20px; 
+    transition: 0.3s; 
+    font-size: 1.2em; 
+    text-transform: uppercase; /* Convierte el texto en mayúsculas */
+}
+
+/* Cambia el color del texto del enlace al pasar el cursor */
+header .navbar li a:hover {
+    color: #ff0000;
+}
+
+
+/*SUBMENU*/
+
+/* Estiliza el submenu de la lista desplegable */
+.submenu {
+    display: none; /* Oculta el submenu por defecto */
+    position: absolute; /* Posiciona el submenu de manera absoluta */
+    left: 50%; /* Lo coloca en el centro horizontal del elemento padre */
+    transform: translateX(-55%); /* Ajusta la posición horizontal */
+    background-color: #1C0C3E; /* Color de fondo del submenu */
+    z-index: 1000; /* Profundidad del z-index para estar por encima de otros elementos */
+}
+
+/* Muestra el submenu al pasar el cursor sobre el elemento padre */
+.navbar li:hover .submenu {
+    display: block;
+}
+
+/* Estiliza los enlaces del submenu */
+.submenu li a {
+    color: white; 
+    display: block; /* Muestra los enlaces en bloque */
+    text-decoration: none; /* Elimina el subrayado */
+}
+
+/* PAGINA DE INICIO */
+
+/* Configuración general del contenedor de contenido */
+.contenido {
+    position: relative; /* Posiciona de manera relativa */
+    width: 100%; /* Ancho completo del contenedor */
+    display: flex; /* Usa flexbox para el diseño */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    align-items: center; /* Centra verticalmente los elementos */
+    padding-left: 30px; /* Espaciado interno a la izquierda */
+}
+
+/* Estilos para el cuadro de título */
+.contenido .titulobox {
+    position: relative; 
+    max-width: 600px; 
+    text-align: left; /* Alineación del texto a la izquierda */
+    margin-bottom: -150px; /* Espacio superior */
+}
+
+/* Estilos para el título principal */
+.contenido .titulobox h2 {
+    font-size: 2.5em; 
+    text-transform: uppercase; 
+    color: rgb(255, 255, 255); 
+    font-family: "Montserrat", sans-serif; 
+    font-weight: 600; /* Grosor de la fuente */
+}
+
+/* Estilos para la parte resaltada del título */
+.contenido .titulobox h2 span {
+    font-size: 1.0em; 
+    text-transform: uppercase; 
+    color: rgb(255, 0, 0);
+    font-family: "Montserrat", sans-serif; 
+    font-weight: 600; 
+}
+
+/* Estilos para el subtítulo */
+.contenido .titulobox h3 {
+    color: rgb(255, 0, 0); 
+    font-size: 2.0em; 
+    line-height: 1.0; /* Altura de línea */
+    font-family: "Montserrat", sans-serif; 
+    font-weight: 600; 
+}
+
+/* Estilos para el párrafo de descripción */
+.contenido .titulobox p {
+    font-size: 0.8em; 
+    line-height: 1.2; 
+    text-transform: uppercase; 
+    color: rgb(255, 255, 255); 
+    font-family: "Montserrat", sans-serif; 
+    font-weight: 600; 
+}
+
+/* Estilos para el enlace dentro del cuadro de título */
+.contenido .titulobox a {
+    text-decoration: none; /* Elimina la decoración de enlace */
+    text-transform: uppercase; /* Transforma el texto a mayúsculas */
+    color: rgb(0, 0, 0); /* Color del texto */
+    background: rgb(204, 190, 1); /* Color de fondo del botón */
+    padding: 1em 3em; /* Espaciado interno del botón */
+    margin: left 30px; /* Margen izquierdo del botón */
+    border-radius: 20px; /* Borde redondeado del botón */
+    letter-spacing: 2px; /* Espaciado entre letras */
+    transition: 0.5s; /* Transición de animación */
+    font-family: "Montserrat", sans-serif; 
+    font-weight: 600; /* Grosor de la fuente */
+    /* Estilos para el efecto de brillo */
+    --glow-color: rgb(227, 204, 0);
+    --glow-spread-color: rgba(245, 245, 245, 0.571);
+    --enhanced-glow-color: rgba(255, 255, 255, 0.796);
+    --btn-color: rgb(222, 251, 0);
+    border: .25em solid var(--glow-color);
+    outline: none;
+    box-shadow: 0 0 1em .25em var(--glow-color),
+        0 0 4em 1em var(--glow-spread-color),
+        inset 0 0 .75em .25em var(--glow-color);
+    text-shadow: 0 0 .5em var(--glow-color);
+    position: relative;
+    transition: all 0.3s;
+}
+
+/* Estilos para la sección de contenido de la página de inicio */
+
+/* Configuración general del contenedor de contenido */
+.contenido {
+    position: relative; 
+    width: 100%; /* Ancho completo del contenedor */
+    display: flex; 
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    align-items: center; /* Centra verticalmente los elementos */
+    padding-left: 30px; /* Espaciado interno a la izquierda */
+}
+
+/* Estilos para el cuadro de título */
+.contenido .titulobox {
+    position: relative; 
+    max-width: 600px; /* Ancho máximo del cuadro de título */
+    text-align: left; 
+    margin-top: 50px; 
+}
+
+/* Estilos para el título principal */
+.contenido .titulobox h2 {
+    font-size: 2.5em; 
+    text-transform: uppercase; 
+    color: rgb(255, 255, 255); 
+    font-family: "Montserrat", sans-serif; 
+    font-weight: 600; 
+}
+
+/* Estilos para la parte resaltada del título */
+.contenido .titulobox h2 span {
+    font-size: 1.0em; 
+    text-transform: uppercase;
+    color: rgb(255, 0, 0); 
+    font-family: "Montserrat", sans-serif; 
+    font-weight: 600; 
+}
+
+/* Estilos para el subtítulo */
+.contenido .titulobox h3 {
+    color: rgb(255, 0, 0); 
+    font-size: 2.0em; 
+    line-height: 1.0; 
+    font-family: "Montserrat", sans-serif; 
+    font-weight: 600; 
+}
+
+/* Estilos para el párrafo de descripción */
+.contenido .titulobox p {
+    font-size: 0.8em; 
+    line-height: 1.2; /* Altura de línea */
+    text-transform: uppercase; 
+    color: rgb(255, 255, 255);
+    font-family: "Montserrat", sans-serif; 
+    font-weight: 600;
+}
+
+/* Estilos para el enlace dentro del cuadro de título */
+.contenido .titulobox a {
+    text-decoration: none; 
+    text-transform: uppercase; 
+    color: rgb(0, 0, 0); 
+    background: rgb(204, 190, 1); /* Color de fondo del botón */
+    padding: 1em 3em; /* Espaciado interno del botón */
+    margin: left 30px; /* Margen izquierdo del botón */
+    border-radius: 20px; /* Borde redondeado del botón */
+    letter-spacing: 2px; /* Espaciado entre letras */
+    transition: 0.5s;
+    font-family: "Montserrat", sans-serif; 
+    font-weight: 600; 
+    /* Estilos para el efecto de brillo */
+    --glow-color: rgb(227, 204, 0);
+    --glow-spread-color: rgba(245, 245, 245, 0.571);
+    --enhanced-glow-color: rgba(255, 255, 255, 0.796);
+    --btn-color: rgb(222, 251, 0);
+    border: .25em solid var(--glow-color);
+    outline: none;
+    box-shadow: 0 0 1em .25em var(--glow-color),
+        0 0 4em 1em var(--glow-spread-color),
+        inset 0 0 .75em .25em var(--glow-color);
+    text-shadow: 0 0 .5em var(--glow-color);
+    position: relative;
+    transition: all 0.3s;
+}
+
+/*Características de las fotos con la clase imgbox que son comunes en todas las webs*/
+
+.contenido .imgbox {
+    position: relative;
+    top: 120px;
+    width: 600px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+    margin-bottom: 80px;
+    z-index: -5;
+}
+
+.contenido .imgbox img {
+    height: 75vh;
+}
+
+.contenido .imgbox img:hover {
+    height: 80vh;
+}
+
+
+.contenido .imgbox2 {
+    position: relative;
+    width: 600px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+    z-index: -5;
+}
+
+.contenido .imgbox2 img {
+    height: 75vh;
+}
+
+.contenido .imgbox2 img:hover {
+    height: 80vh;
+}
+
+
+
+.contenido2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url('../img/fondo.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    z-index: 1;
+    margin-top: -50px;
+}
+
+.contenido2 .imgbox {
+    flex: 1;
+    order: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.contenido2 .titulobox {
+    flex: 1;
+    order: 2;
+    text-align: right;
+}
+
+.contenido3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.info-seccion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: -200px;
+}
+
+.texto-introductorio h2 {
+    margin: 50px 0;
+    font-family: "Montserrat", sans-serif;
+    color: #ff0000;
+    font-weight: 600;
+    font-size: 2.9em;
+}
+
+.texto-introductorio h3 {
+
+    font-family: "Montserrat", sans-serif;
+    color: #ffffff;
+}
+
+.contenido3 .section {
+    flex: 1;
+    margin: 10px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.contenido3 .section img {
+    width: 50%;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+.contenido3 .section p {
+    margin-top: 10px;
+    color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+}
+
+.contenido3 .section h2 {
+    color: rgb(255, 0, 0);
+    font-family: "Montserrat", sans-serif;
+}
+
+.contenido4 .section h2 {
+    margin-top: 100px ;
+}
+
+
+.imgteam {
+    margin-bottom: -200px;
+}
+
+/*Footer */
+.pie-pagina {
+    width: 100%;
+    background-color: #1e163b;
+}
+
+.pie-pagina .grupo-1 {
+    width: 100%; /* Ancho completo */
+    max-width: 1800px; /* Ancho máximo */
+    margin: auto; /* Margen automático */
+    display: grid; /* Usa grid para el diseño */
+    grid-template-columns: repeat(3, 1fr); /* Define columnas con fracciones iguales */
+    grid-gap: 50px; /* Espacio entre las celdas del grid */
+    padding: 45px 0px; /* Espaciado interno arriba y abajo */
+    grid-column-gap: 300px; /* Espacio entre columnas */
+}
+
+.pie-pagina .grupo-1 .box figure {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pie-pagina .grupo-1 .box figure img {
+    width: 200px;
+    margin-left: 50px;
+}
+
+.pie-pagina .grupo-1 .box h2 {
+    color: #ff0000;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.pie-pagina .grupo-1 .box p {
+    color: #efefef;
+    margin-bottom: 10px;
+}
+
+.pie-pagina .grupo-1 .redsocial a {
+    display: inline-block;
+    text-decoration: none;
+    line-height: 80px;
+    color: #fff;
+    margin-right: 10px;
+    text-align: center;
+    transition: all 300ms ease; /* Transición suave para todos los cambios durante 300 milisegundos */
+    font-size: 50px;
+}
+
+.pie-pagina .grupo-1 .redsocial a:hover {
+    color: rgb(255, 0, 0);
+}
+
+.pie-pagina .grupo-2 {
+    background-color: #280833ca;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+
+.pie-pagina .grupo-2 small {
+    font-size: 15px;
+}
+
+/*Contacto-FORMULARIO*/
+.page-container {
+    margin-top: 100px;
+    position: relative;
+    left: 100px;
+    width: 60%;
+    display: flex;
+    justify-content: left;
+    bottom: 200px;
+    font-family: "Pixelify Sans", sans-serif;
+}
+
+.page-container .container {
+    position: relative;
+    max-width: 100%;
+    text-align: left;
+}
+
+.page-container .container h2 {
+    font-size: 2.8em;
+    text-transform: uppercase;
+    color: #fff200;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+
+.page-container .phrase2 {
+    font-size: 1.2em;
+    color: #ffffff;
+    margin-bottom: 15px;
+  
+}
+
+
+.page-container .form {
+    position: absolute;
+    top: 100px;
+    width: 1000px;
+    height: 900px;
+}
+
+.form form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    
+}
+
+.form form input,
+textarea,
+.date {
+    background-color: #ff0000a6;
+    border: 0;
+    border-radius: 10px;
+    color: rgb(244, 244, 244);
+    font-size: 1.2em;
+    margin-bottom: 25px;
+    padding: 4px 7px;
+}
+
+.form form fieldset legend .whatsapp,
+input[type="radio"] {
+    width: 20px;
+    margin-left: 10px;
+}
+
+.form form fieldset {
+    width: 500px;
+}
+
+form .checkbox {
+    position: relative;
+    left: 10px;
+    bottom: 33px;
+}
+
+.form form .date {
+    width: 250px;
+    position: absolute;
+    top: 160px;
+    left: 200px;
+}
+
+.form form select {
+    width: 250px;
+    position: absolute;
+    top: 210px;
+    left: 200px;
+}
+
+.form form input[type="submit"] {
+    width: 180px;
+}
+
+.form form input[type="submit"]:hover {
+    background-color: #ff0000a6;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.form form input[type="file"] {
+    width: 300px;
+    
+}
+
+.form form select[name="city"] {
+    background-color: #ff0000a6;; /* Cambia el color de fondo a rojo */
+    color: #ffffff; /* Cambia el color del texto a blanco para mejor contraste */
+    border: 2px solid #000000; /* Añade un borde negro para definir mejor el select */
+    padding: 5px 10px; /* Añade algo de relleno interno para que el texto no esté tan al borde */
+    border-radius: 5px; /* Bordes redondeados para un aspecto más moderno */
+}
+
+/* Modificación para el hover en el select de ciudades */
+.form form select[name="city"]:hover {
+    background-color: #e60000; /* Cambia el color de fondo al pasar el ratón para una interacción visual */
+}
+
+
+/* Cambiar el color del placeholder para todos los inputs */
+input::placeholder {
+    color: #ffffffe6;  /* Establece el color del texto del placeholder */
+    
+}
+
+/* Cambiar el color del placeholder de la caja de texto */
+textarea::placeholder {
+    color: #ffffffe6;
+
+}
+
+/*Personalizar*/
+.personalizacion {
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 1.0em;
+    color: #ffffff;
+    margin-left: 250px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+}
+
+.personalizacionfrase {
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 1.5em;
+    color: #ffe600;
+    margin-left: 500px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+}
+
+.botones {
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 18px;
+    color: #ffffff;
+    border: 1px solid #ff0000;
+    background-color: #ffffff;
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+    margin-left: 0px;
+    margin-bottom: 10px;
+    background-color: #ff190098;
+}
+
+.select {
+    font-family: "Pixelify Sans", sans-serif;
+    color: #ffffff;
+    border-radius: 5px;
+    background-color:#ff0000a3;
+}
+
+/*Productos*/
+.imgconsola {
+    margin-bottom: -200px;
+    width: 400px;
+    height: 600px;
+    padding-left: 50px;
+    padding-right: 0px;
+}
+
+.imgconsola2 {
+    margin-bottom: -200px;
+    width: 400px;
+    height: 500px;
+    padding-left: 50px;
+    padding-right: 0px;
+}
+
+.imgconsola3 {
+    margin-bottom: -200px;
+    width: 350px;
+    height: 550px;
+    padding-left: 50px;
+    padding-right: 0px;
+}
+
+
+.mueble {
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 0.9em;
+    color: #ffffff;
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin-bottom: -100px;
+}
+
+.font {
+    font-size: 2.4em;
+}
+
+.mueble {
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 1.0em;
+    color: #ffffff;
+    list-style: none;
+    text-align: left;
+    width: 100%;
+    max-width: 600px;
+}
+
+.font {
+    font-size: 2.4em;
+}
+
+/* Estilos para el contenedor que brilla al pasar el ratón */
+.divbrillo label {
+    cursor: pointer;
+    display: block;
+    padding: 10px;
+    margin: 0;
+}
+
+/* Oculta los checkboxes */
+input[type="checkbox"] {
+    display: none;
+}
+
+/* Oculta las descripciones inicialmente */
+.descripcion {
+    display: none;
+    padding: 10px;
+    border-left: 3px solid #ffd700;
+    box-sizing: border-box;
+}
+
+/* Muestra la descripción cuando el checkbox correspondiente está marcado */
+input[type="checkbox"]:checked + .descripcion {
+    display: block;
+}
+
+/* Efecto de brillo al pasar el ratón sobre el elemento */
+.divbrillo:hover {
+    background-color: #ffd700;
+    border-radius: 5px;
+    opacity: 0.9;
+    color: #000000;
+} 
+
+/*En definitiva hemos usado tanto en HTML5 como en CSS las etiquetas vistas durante el curso de LLMM, tales como formularios completos, listas,
+menús desplegables, botones, hipervínculos, insercción de imágenes... ademas de usar en CSS todo lo aprendido para posicionar los elementos
+dentro de la web con div y section, después hemos dado aspecto visual con CSS usando tamaños, formas, colores, tipografías con elementos vistos 
+en toda la asignatura { :)
+}*

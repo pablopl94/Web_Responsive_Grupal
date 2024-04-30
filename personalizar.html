@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <!--  LIBRERIA ICONOS WEB IONIC.IO -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <title>Personalización</title>
+</head>
+<!--  Tenemos el mismo menu de navegación común en todas las webs de Mi Arcade -->
+<body>
+    <section>
+       <header>
+          <a href="index.html"><img src="img/logo.png" class="logo"> </a>
+          <ul class="navbar">
+             <li><a href="index.html">Inicio</a></li>
+             <li><a href="personalizar.html">Personalizar</a></li>
+             <li><a href="#">Productos</a>
+                <ul class="submenu">
+                   <li><a href="productoupright.html">UPRIGHT ARCADE</a></li>
+                   <li><a href="productolowboy.html">LOWBOY ARCADE</a></li>
+                   <li><a href="productowall.html">WALL ARCADE</a></li>
+                </ul>
+             </li>
+             <li><a href="quienessomos.html">Quienes somos</a></li>
+             <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+       </header>
+<!-- Explicación de lo que pudes personalizar y hemos añadido una lista de selección para que el cliente haga sus pedidos -->
+        <div class="contenido">
+            <div class="titulobox">
+                <h2>PERSONALIZA<span> TU MÁQUINA</span><br></h2> <br>
+                <p class="frase">Personalizar tu máquina vintage de videojuegos con nosotros
+                    <br>te brinda una experiencia única y personalizada que se
+                    <br>adapta perfectamente a tus gustos y preferencias.
+                    <br>Desde la selección de los juegos clásicos hasta la estética y los detalles técnicos,
+                    <br>cada aspecto puede ser ajustado según tus deseos.
+                    <br>Esto no solo te permite revivir la nostalgia de los juegos retro,
+                    <br>también te ofrece la oportunidad de crear un objeto único que refleje tu estilo y pasión por el
+                    gaming.
+                    <br>Con nuestra atención al detalle y experiencia en la creación de estas máquinas,
+                    <br>garantizamos que cada aspecto de tu personalización se lleve a cabo con precisión y calidad,
+                    <br>brindándote una pieza que no solo sea divertida de jugar, sino también un verdadero tesoro
+                    personalizado.
+                </p><br><br>
+            </div>
+            <div class="imgbox">
+                <img src="img/personalizarmaquina.png" alt="">
+            </div>
+        </div>
+    </section>
+    <br><br>
+    <h2><span class="personalizacionfrase">Personalización</span></h2>
+    <span class="personalizacionfrase">¿Te atreves a personalizar tu consola?</span>
+    <br><br>
+    <div class="personalizacion">
+        <div class="personalizacion">
+            <form action="#" method="post" enctype="multipart/form-data">
+                <span class="phrase">Elige tu consola</span>
+                <select name="consola" class="select">
+                    <option value="Nintento 64">Nintendo 64</option>
+                    <option value="NES">NES</option>
+                    <option value="SEGA MS">SEGA MS</option>
+                    <option value="SEGA DC">SEGA DC</option>
+                    <option value="PS1">PS1</option>
+                    <option value="PS2">PS2</option>
+                    <option value="Game Boy">Game Boy</option>
+                    <option value="Game Boy Color">Game Boy Color</option>
+                    <option value="Game Boy Advance">Game Boy Advance</option>
+                    <option value="Maquina Recreativa Arcade Mario">Maquina Recreativa Arcade Mario</option>
+                    <option value="Maquina Recreativa Arcade Pin Ball">Maquina Recreativa Arcade Pin Ball</option>
+                    <option value="Maquina Recreativa Arcade Street Fighter">Maquina Recreativa Arcade Street Fighter
+                    </option>
+                </select>
+                <br><br>
+                <form action="#" method="post" enctype="multipart/form-data">
+                    <span class="phrase">Elige color</span>
+                    <select name="color" class="select">
+                        <option value="Roja Mate">Roja Mate</option>
+                        <option value="Negro perla">Negro Perla</option>
+                        <option value="Transparente">Transparente</option>
+                        <option value="Blanco">Blanco</option>
+                    </select>
+                    <br><br>
+                    <textarea name="message" cols="30" rows="8"
+                        placeholder="Sugerencias o añade cualquier comentario que desee" class="select">
+                    </textarea>
+                    <br><br>
+                    <input type="submit" value="Enviar" class="botones">
+                    <input type="reset" value="Borrar" class="botones">
+                </form>
+        </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br>
+    <!-- Con el footer común en todas las webs para tener siempre la información que consideramos básica -->
+    <footer class="pie-pagina">
+        <div class="grupo-1">
+            <div class="box">
+                <figure>
+                    <a href="index.html">
+                        <img src="img/logo.png">
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>SOBRE NOSOTROS</h2>
+                <p>Somos la referencia en la fabricación de máquinas arcade personalizadas desde 2012
+                    Cuando estés ante una máquina Bricogame, sabrás por la calidad, acabados y sistema, que estás ante
+                    una de las mejoras máquinas del mercado.</p>
+
+            </div>
+            <div class="box">
+                <h2>SIGUENOS</h2>
+                <div class="redsocial">
+                    <a href="https://www.facebook.com"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="https://www.instagram.com/"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="https://twitter.com/"><ion-icon name="logo-twitter"></ion-icon></a>
+                </div>
+            </div>
+        </div>
+        <div class="grupo-2">
+            <p>&copy; Web Trabajo Grupal creado para la materia de Lenguaje de Marcas del CFGS DAW</p>
+        </div>
+    </footer>
+</body>
+
+</html>
